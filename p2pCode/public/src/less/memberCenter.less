@@ -1,0 +1,133 @@
+/*头部*/
+@import url("header.less");
+
+body {
+    overflow-x: hidden;
+}
+ 
+/*内容*/
+.member {
+    // 左侧导航
+    #leftNav {
+        ul {  
+            li {
+                padding-left: 50px;
+            }
+            .active {
+                a {
+                    color: ghostwhite;
+                }
+            }
+        }
+        h4 a {  
+            color: #337ab7;   
+        }
+    }
+    //右侧内容
+    #rightCon {
+        //默认大屏隐藏
+        #toggleBtn {
+            display: none;
+        }
+        .member_basic {
+            border-bottom: 1px solid #ddd;
+            padding-bottom:16px; 
+            .head_img {
+                border: 1px solid #ddd;
+                padding: 10px;
+                float: left;
+                img {
+                    width: 72px;
+                    height: 72px;
+                }
+            }
+            .pull-left {
+                margin-left: 20px;
+            }
+        }
+        /*详细信息*/
+        .member_detailed {
+            .row {
+                margin-left: 15px;
+                margin-bottom: 15px;
+                .member_money {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+                .member_info_manage {
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    .btn:nth-of-type(1) {
+                        margin-right: 20px;
+                    }
+                }
+               
+                .member_info {
+                    margin-bottom: 20px;
+                }
+                .member_infotext {
+                    margin-left: 10px;
+                    h5 {
+                        font-weight: bold;
+                        padding: 0px;
+                        margin: 0px 0px 10px 0px;
+                    }
+                }
+                
+            }
+            .moneyColor {
+                color: #337ab7;
+            }
+            border-bottom: 1px solid #ddd;
+        }
+    }
+    @media screen and(max-width:994px) {
+        .member_info_manage {
+            margin-left: 100px;
+        }
+        .member_infotext {
+            margin-left: 0;
+            margin-top: 15px;
+        } 
+        .member_money {
+           font-size: 16px;
+        }   
+    }
+    @media screen and(max-width:768px) {
+        //子绝父相
+        // 父容器相对定位
+        #memberMain {
+            position: relative;
+            height: 1000px;
+            left: 0;
+            transition: all 0.3s linear;
+        }
+        #memberMain.active {
+            left: -52%;
+            
+        }
+        #rightCon {
+            position: absolute;
+            right: -50%;
+            /*基本信息*/
+            //切换按钮
+            #toggleBtn {
+                display: block;
+                position: relative;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    @media screen and(max-width:450px) {
+        .member_info_manage {
+            margin-left: 0;
+        }
+        
+    }
+}
+
+
+
+/*尾部*/
+@import url("footer.less"); 

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--开启视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css">
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="./dist/css/borrow_apply.css">
+    <!-- jq库文件 -->
+    <script src="./lib/jquery/dist/jquery.js"></script>
+    <!-- 验证是否登录 -->
+    <script src="dist/js/checklogin.js"></script>
+
+    <title>个人资料</title>
+</head>
+
+<body>
+    <!-- 页面头部 start-->
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span class="glyphicon glyphicon-phone-alt"></span>
+                        <i> 028-86261949</i>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-home"></i> 首页</a>
+                        </li>
+                        <!-- 登陆后再显示 -->
+                        <li class="loginshow ">
+                            <a href="memberCenter.html">
+                                <i class="fa fa-pagelines"></i>
+                                <span class="username_value"></span>
+                            </a>
+                        </li>
+                        <li class="loginshow">
+                            <a href="#">
+                                <i class="fa fa-money"></i> 账户充值</a>
+                        </li>
+                        <li class="loginshow">
+                            <a href="users/logout">
+                                <i class="fa fa-sign-out"></i> 注销</a>
+                        </li>
+                        <!-- <li class="loginhide">
+                            <a href="login.html"><i class="fa fa-sign-in"></i>  登录</a>
+                        </li>
+                        <li class="loginhide">
+                            <a href="register.html"><i class="fa fa-registered"></i>  快速注册</a>
+                        </li> -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question-circle"></i> 帮助</a>
+                        </li>
+                        <!-- 通过bootstrap自带方法实现hover的图片显示 -->
+                        <li id="weixinTips" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='imgs/contract.png' width='120px'>">
+                            <a href="#">
+                                <i class="fa fa-qq"></i> 联系客服</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </header>
+    <!-- 页面头部 end-->
+    <!-- 导航 start-->
+    <nav class="navbar navbar-default navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <img src="imgs/logo.png" class="img-responsive" alt="">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=" navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="invest.html">我要投资</a>
+                    </li>
+                    <li>
+                        <a href="borrow.html">我要借款</a>
+                    </li>
+                    <li class="active">
+                        <a href="memberCenter.html">个人中心</a>
+                    </li>
+                    <li>
+                        <a href="#">新手指引</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- 导航 end-->
+
+    <!-- 内容 start -->
+    <div class="container member">
+        <div class="row">
+            <!-- 导航菜单 -->
+            <div class="col-sm-3 nav_left">
+                <div class="panel-group" role="tablist">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading0">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup0" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    投资项目
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">投资项目</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    借款项目
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="borrow_list.html">借款项目</a>
+                                </li>
+                                <li class="list-group-item active">
+                                    <a href="borrow_apply.html">还款明细</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="borrow_echarts.html">借款类型报表</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading2">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup2" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    我的账户
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="memberCenter.html">账户信息</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="realPath.html">实名认证</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">银行卡管理</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">登录记录</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading3">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup3" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    资产详情
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">账户流水</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">充值明细</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">提现记录</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">收款明细</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading4">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup4" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    个人资料
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="borrow_info.html">个人资料</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 借款申请界面 -->
+            <div class="col-sm-9 borrow_apply">
+                <!-- 基本信息 -->
+                <div class="tip_info">
+                    <h3>信用借款</h3>
+                    <p>
+                        <span class="text-info">授信额度：</span>
+                        <span class="text-danger">2000</span>
+                        <span class="text-info">可借金额：</span>
+                        <span class="text-danger">2000</span>
+                    </p>
+                </div>
+                <!-- 申请信息 -->
+                <!-- 申请信息标题 -->
+                <div class="borrow_apply_title">
+                    <span>借款信息</span>
+                    <span class="btn btn-primary">信用贷</span>
+                </div>
+                <!-- 申请信息内容 -->
+                <form id="borrowForm" class="borrow_apply_form">
+                    <div class="form-group row">
+                        <label for="borrowPerson" class="col-sm-3 text-right">借款人</label>
+                        <div class="input_group col-sm-6">
+                            <!-- <span class="username_value"></span> -->
+                            <input type="text" id="borrowPerson" name="borrowPerson" readonly class="form-control username_value">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowMoney" class="col-sm-3 text-right">借款金额</label>
+                        <div class="input_group col-sm-6">
+                            <input type="text" id="borrowMoney" name="borrowMoney" class="form-control">
+                            <div class="input-group-addon">元</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowRate" class="col-sm-3 text-right">借款利息</label>
+                        <div class="input_group col-sm-6">
+                            <input type="text" id="borrowRate" name="borrowRate" class="form-control">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                        <div class="col-sm-5"></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowTerm" class="col-sm-3 text-right">借款期限</label>
+                        <div class="input_group col-sm-6">
+                            <select name="borrowTerm" class="form-control" id="borrowTerm">
+                                <option value="1">1</option>
+                                <option value="2">3</option>
+                                <option value="3">6</option>
+                                <option value="4">9</option>
+                                <option value="5">12</option>
+                            </select>
+                            <span class="input-group-addon">月</span>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group row">
+                        测试
+                        <div class="input-group">
+                            <input type="text" class="form-control"  placeholder="Amount">
+                            <div class="input-group-addon">.00</div>
+                        </div>
+                    </div> -->
+
+
+
+                    <div class="form-group row">
+                        <label for="repayment" class="col-sm-3 text-right">还款方式</label>
+                        <div class="input_group col-sm-6">
+                            <input type="radio" id="repayment" name="repayment" value="按月分期">按月分期
+                            <input type="radio" id="repayment" name="repayment" value="按月到期">按月到期
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="minMoney" class="col-sm-3 text-right">最小投标</label>
+                        <div class="input_group col-sm-6">
+                            <input type="text" id="minMoney" name="minMoney" class="form-control">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="maxMoney" class="col-sm-3 text-right">最大投标</label>
+                        <div class="input_group col-sm-6">
+                            <input type="text" id="maxMoney" name="maxMoney" class="form-control">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowBonus" class="col-sm-3 text-right">投标奖金</label>
+                        <div class="input_group col-sm-6">
+                            <input type="text" id="borrowBonus" name="borrowBonus" class="form-control">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowDays" class="col-sm-3 text-right">招标天数</label>
+                        <div class="input_group col-sm-6">
+                            <select name="borrowDays" class="form-control" id="borrowDays">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span class="input-group-addon">天</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowDate" class="col-sm-3 text-right">借款日期</label>
+                        <div class="input_group col-sm-6">
+                            <input type="text" name="borrowDate" class="Wdate form-control" onclick="WdatePicker({isShowClear:false,readOnly:true})">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowType" class="col-sm-3 text-right">借款类型</label>
+                        <div class="input_group col-sm-6">
+                            <select type="text" id="borrowType" name="borrowType" class="form-control">
+                                <option value="0">信用贷</option>
+                                <option value="1">车易贷</option>
+                                <option value="2">房易贷</option>
+                            </select>
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowTitle" class="col-sm-3 text-right">借款标题</label>
+                        <div class="input_group col-sm-6">
+                            <input type="text" id="borrowTitle" name="borrowTitle" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="borrowDetails" class="col-sm-3 text-right">借款描述</label>
+                        <div class="input_group col-sm-6">
+                            <textarea type="text" id="borrowDetails" name="borrowDetails" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="row"> -->
+                    <!-- <div class="borrow_form_tips col-sm-3">
+                        <h4>相关费用</h4>
+                        <p>
+                            <span class="text-info">利息</span>
+                            <span class="el-borrow-cost" id="cost01">--</span>
+                        </p>
+                        <p>
+                            <span class="text-info">奖金</span>
+                            <span class="el-borrow-cost" id="cost02">--</span>
+                        </p>
+                        <p>
+                            <span class="text-info">管理费</span>
+                            <span class="el-borrow-cost" id="cost03">--</span>
+                        </p>
+                    </div> -->
+                    <!-- </div> -->
+
+                    <div class="form-group ">
+                        <button id="submitBtn" class="btn btn-primary col-sm-offset-4" type="submit">提交申请</button>
+                    </div>
+                </form>
+                 <!-- 借款表单验证成功/失败后的模态框 -->
+                 <div class="modal fade" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel">登录结果</h4>
+                        </div>
+                        <div class="modal-body"> 
+                          <p class="reg_result">
+                              
+                          </p>
+                        </div>
+                       
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 内容 end -->
+
+
+    <!-- 底部 -->
+    <footer id="footer" class="row">
+        <div class="container">
+            <div class="col-sm-8 col-xs-12">
+                <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                <p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+                <p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+                <p>电  话： 028-86261949&nbsp; / 400-808-6840  邮箱： yuandaima@itsource.cn
+                </p>
+                <p>
+                    <a href="http://www.miitbeian.gov.cn">蜀ICP备14030149号-1</a>
+                    <a href="http://www.gaj.chengdu.gov.cn">蜀公网安备510114990541</a>
+                </p>
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <p>官方微博：</p>
+                <img src="./imgs/tecent.png" class="img-responsive" alt="">
+                <img src="./imgs/sina.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <p>官方微信：</p>
+                <img src="./imgs/wx.jpg" class="img-responsive" alt="">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- bootstrap库文件 -->
+    <script src="./lib/bootstrap/dist//js/bootstrap.js"></script>
+    <!-- 自定义脚本 -->
+    <script src="dist/js/p2pEffects.js"></script>
+    <!-- 日历插件 -->
+    <script src="./lib/My97DatePicker/WdatePicker.js"></script>
+    <!-- 表单验证插件 -->
+    <script src="./lib/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+    <!-- 配置表单验证 -->
+    <script src="./dist/js/checkForm.js"></script>
+</body>
+
+</html>

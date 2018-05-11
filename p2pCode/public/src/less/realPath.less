@@ -1,0 +1,66 @@
+/*头部*/
+@import url("header.less");
+
+/*内容*/
+.member {
+    /*左侧导航样式*/
+    .nav_left {
+        ul {
+            li {
+                padding-left: 50px;
+            }
+            .active {
+                a {
+                    color: ghostwhite;
+                }
+            }
+        }
+    }
+    /*右侧信息样式*/
+    .member_information {
+        form {
+            .form-group {
+                margin-bottom: 15px;
+                label {
+                    height: 34px;
+                    line-height: 34px;
+                    text-align: right;
+                }
+                div>p {
+                    height: 34px;
+                    line-height: 34px;
+                }
+                @media screen and(max-width:768px) {
+                    label {
+                        text-align: left
+                    }
+                }
+                div>input,div>select {
+                    width: 260px;
+                }
+                #address {
+                    width: 100%;
+                    max-width: 500px;
+                }
+                #photo_front_img,#photo_back_img {
+                    width: 120px;
+                    height: 120px;
+                    border: 1px solid black;
+                    margin-right: 20px;
+                    p {
+                        background-color: #337ab7;
+                    }
+                }
+                .upload {
+                    .tooltip-inner {
+                        background-color: #fff;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*尾部*/
+@import url("footer.less"); 

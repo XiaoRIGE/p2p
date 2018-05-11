@@ -1,0 +1,70 @@
+/*头部*/
+@import url("header.less");
+
+/*借款方法样式*/ 
+.loan_method {
+    .borrow_item {
+        .borrow_item_title {
+            background-color: #40d47e;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 48px;
+            padding-left: 20px;
+            color: #FFFFFF;
+        }
+        .borrow_item_content {
+            background-color: #f9f9f9;
+            padding: 14px;
+            font-size: 16px;
+            p i {
+                font-size: 18px;
+            }
+            a {
+                font-size: 14px;
+            }
+            p:nth-of-type(2) {
+                font-size: 14px;
+                display: block;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                color: #737373;
+            }
+            ul{
+                margin-left: -25px;
+                li {
+                    color: #555;
+                    font-size: 14px;
+                    list-style: none;
+                    padding-left: 20px;
+                    margin-top: 5px;
+                    background: url("../../imgs/sequare.png") left center no-repeat;
+                }
+            } 
+            .borrow_apply {
+                display: block;
+                width: 80px;
+                height: 30px;
+                border-radius: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: white;
+                background-color: #00a8ff;
+                margin: 0 auto;
+            }
+        }
+    }
+    .borrow_item:nth-of-type(2) {
+        .borrow_item_title {
+            background-color: #ec7e20;
+        }
+    }
+    .borrow_item:nth-of-type(3) {
+        .borrow_item_title {
+            background-color: #2ca2ee;
+        }
+    }
+}
+
+
+/*尾部*/
+@import url("footer.less"); 

@@ -1,0 +1,141 @@
+/*头部样式*/
+ul li {
+  list-style: none;
+}
+/*头部样式*/
+header .navbar {
+  border-radius: 0px;
+  margin-bottom: 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  padding: 15px 10px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #0099FF;
+}
+.navbar-inverse .navbar-brand {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 24px;
+}
+.glyphicon-phone-alt {
+  color: #fff;
+  font-size: 16px;
+}
+/*导航样式*/
+.navigation {
+  margin-bottom: 10px;
+}
+.navigation .navbar-header {
+  padding: 25px 15px;
+  font-size: 20px;
+}
+.navigation .navbar-nav > li > a {
+  min-width: 80px;
+  line-height: 60px;
+  font-size: 16px;
+}
+.navigation .navbar-nav > li > a:hover {
+  background: none repeat scroll 0 0 #f0f0f0;
+  color: #0099FF;
+}
+/*小屏断点*/
+@media screen and (max-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    text-align: center;
+  }
+}
+/*广告样式*/
+#carousel-example-generic {
+  width: 98%;
+  margin: 0 auto;
+}
+/*项目特色样式*/
+.feature {
+  margin-top: 20px;
+}
+.feature dl > dt {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.feature dl > dd {
+  color: #999;
+}
+.feature .col-md-4 {
+  padding-left: 80px;
+}
+.feature .feature_item1 {
+  background: url("../../imgs/feature01.png") no-repeat;
+}
+.feature .feature_item2 {
+  background: url("../../imgs/feature02.png") no-repeat;
+}
+.feature .feature_item3 {
+  background: url("../../imgs/feature03.png") no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .feature .col-md-4 {
+    min-height: 70px;
+  }
+}
+/*投资列表样式*/
+.invest .clearfix {
+  margin: 10px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.invest .clearfix .btn {
+  padding: 12px 12px;
+}
+.invest .panel .pull-left {
+  border-bottom: 3px solid #2e8ece;
+}
+.invest .panel .table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+.invest .panel thead th {
+  color: #999999;
+}
+.invest .panel-title {
+  font-size: 24px;
+  color: #2e8ece;
+  font-weight: bold;
+  border-bottom: 3px solid #2e8ece;
+  margin: 10px 0px 0px;
+}
+.invest .row {
+  margin-bottom: 20px;
+}
+.invest .row .new_list ul {
+  margin: 0;
+  padding: 0;
+}
+.invest .row .new_list ul li {
+  list-style: none;
+  line-height: 38px;
+  font-size: 14px;
+  border-bottom: 1px dotted #eee;
+}
+.invest .row .new_list ul li a {
+  color: #555;
+}
+.invest .row .new_list ul li a:hover {
+  color: #0099FF;
+}
+@media all and (max-width: 630px) {
+  .invest .mobileHide {
+    display: none;
+  }
+}
+/*尾部样式*/
+/*尾部*/
+#footer {
+  background-color: #f8f8f8;
+  margin: 20px 0px 20px 0px;
+  padding-top: 30px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=maps/index.css.map */

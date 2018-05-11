@@ -1,0 +1,114 @@
+/*头部*/
+ul li {
+  list-style: none;
+}
+/*头部样式*/
+header .navbar {
+  border-radius: 0px;
+  margin-bottom: 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  padding: 15px 10px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #0099FF;
+}
+.navbar-inverse .navbar-brand {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 24px;
+}
+.glyphicon-phone-alt {
+  color: #fff;
+  font-size: 16px;
+}
+/*导航样式*/
+.navigation {
+  margin-bottom: 10px;
+}
+.navigation .navbar-header {
+  padding: 25px 15px;
+  font-size: 20px;
+}
+.navigation .navbar-nav > li > a {
+  min-width: 80px;
+  line-height: 60px;
+  font-size: 16px;
+}
+.navigation .navbar-nav > li > a:hover {
+  background: none repeat scroll 0 0 #f0f0f0;
+  color: #0099FF;
+}
+/*小屏断点*/
+@media screen and (max-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    text-align: center;
+  }
+}
+/*借款方法样式*/
+.loan_method .borrow_item .borrow_item_title {
+  background-color: #40d47e;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 48px;
+  padding-left: 20px;
+  color: #FFFFFF;
+}
+.loan_method .borrow_item .borrow_item_content {
+  background-color: #f9f9f9;
+  padding: 14px;
+  font-size: 16px;
+}
+.loan_method .borrow_item .borrow_item_content p i {
+  font-size: 18px;
+}
+.loan_method .borrow_item .borrow_item_content a {
+  font-size: 14px;
+}
+.loan_method .borrow_item .borrow_item_content p:nth-of-type(2) {
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+.loan_method .borrow_item .borrow_item_content ul {
+  margin-left: -25px;
+}
+.loan_method .borrow_item .borrow_item_content ul li {
+  color: #555;
+  font-size: 14px;
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+  background: url("../../imgs/sequare.png") left center no-repeat;
+}
+.loan_method .borrow_item .borrow_item_content .borrow_apply {
+  display: block;
+  width: 80px;
+  height: 30px;
+  border-radius: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  background-color: #00a8ff;
+  margin: 0 auto;
+}
+.loan_method .borrow_item:nth-of-type(2) .borrow_item_title {
+  background-color: #ec7e20;
+}
+.loan_method .borrow_item:nth-of-type(3) .borrow_item_title {
+  background-color: #2ca2ee;
+}
+/*尾部*/
+/*尾部*/
+#footer {
+  background-color: #f8f8f8;
+  margin: 20px 0px 20px 0px;
+  padding-top: 30px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=maps/borrow.css.map */

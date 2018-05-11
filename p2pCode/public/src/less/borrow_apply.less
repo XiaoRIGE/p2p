@@ -1,0 +1,97 @@
+/*头部*/
+@import url("header.less");
+
+/*内容*/
+.member {
+    .nav_left {
+        ul {
+            li {
+                padding-left: 50px;
+            }
+            .active {
+                a {
+                    color: ghostwhite;
+                }
+            }
+        }
+        h4 a {
+            color: #337ab7;
+        }
+    }
+    .borrow_apply {
+        // 基本信息
+        .tip_info {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #F4F8FA;
+            border-left: 2px solid #0099DD;
+            h3 {
+                color: #09d;
+            }
+            p>.text-danger {
+                margin-right: 80px;
+            }
+        }
+        //申请信息标题
+        .borrow_apply_title {
+            font-size: 20px;
+            padding-bottom: 9px;
+            margin: 40px 0 20px;
+            border-bottom: 1px solid #eee;
+            .btn-primary {
+                font-size: 75%;
+            }
+        }
+        //申请信息内容
+        .borrow_apply_form {
+            position: relative;
+            label {
+                line-height: 34px;
+            }
+            .input_group { 
+                // 定义一个宽度
+                width: 455px;
+                position: relative;
+                display: table;
+                border-collapse: separate;
+            }
+            input[type="radio"] {
+                margin-top: 10px;
+            }
+            .borrow_form_tips {
+                position: absolute;
+                width: 250px;
+                border-radius: 3px;
+                border: 1px solid #ddd;
+                box-shadow: 1px 1px 20px #ddd;
+                padding: 20px 30px;
+                top: 10px;
+                right: 30px;
+            }
+            .col-sm-6 {
+                padding-right: 0;
+            }
+            @media screen and(max-width:992px) {
+                .borrow_form_tips {
+                    width: 150px;
+                } 
+            }
+            @media screen and(max-width:768px) {
+                .borrow_form_tips {
+                    position: relative;
+                    width: 250px;
+                    margin-left: 30px;
+                    margin-bottom: 30px;
+                } 
+            }
+            @media screen and(max-width:430px) {
+                .input_group {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*尾部*/
+@import url("footer.less"); 

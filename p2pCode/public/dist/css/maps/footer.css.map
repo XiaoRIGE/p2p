@@ -1,0 +1,1 @@
+{"version":3,"sources":["footer.less"],"names":[],"mappings":";AACA;EACI,yBAAA;EACA,yBAAA;EACA,iBAAA;EACA,eAAA;EACA,cAAA","sourcesContent":["/*尾部*/\r\n#footer {\r\n    background-color: #f8f8f8;\r\n    margin: 20px 0px 20px 0px;\r\n    padding-top: 30px;\r\n    margin-right: 0;\r\n    margin-left: 0;\r\n}"],"file":"../footer.css"}

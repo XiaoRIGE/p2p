@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--开启视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css">
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="./dist/css/borrow_list.css">
+    <!-- jq库文件 -->
+    <script src="./lib/jquery/dist/jquery.js"></script>
+    <!-- 验证是否登录 -->
+    <script src="dist/js/checklogin.js"></script>
+
+    <title>还款明细</title>
+</head>
+
+<body>
+    <!-- 页面头部 start-->
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span class="glyphicon glyphicon-phone-alt"></span>
+                        <i> 028-86261949</i>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-home"></i> 首页</a>
+                        </li>
+                        <!-- 登陆后再显示 -->
+                        <li class="loginshow ">
+                            <a href="memberCenter.html">
+                                <i class="fa fa-pagelines"></i>
+                                <span class="username_value"></span>
+                            </a>
+                        </li>
+                        <li class="loginshow">
+                            <a href="#">
+                                <i class="fa fa-money"></i> 账户充值</a>
+                        </li>
+                        <li class="loginshow">
+                            <a href="users/logout">
+                                <i class="fa fa-sign-out"></i> 注销</a>
+                        </li>
+                        <!-- <li class="loginhide">
+                            <a href="login.html"><i class="fa fa-sign-in"></i>  登录</a>
+                        </li>
+                        <li class="loginhide">
+                            <a href="register.html"><i class="fa fa-registered"></i>  快速注册</a>
+                        </li> -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question-circle"></i> 帮助</a>
+                        </li>
+                        <!-- 通过bootstrap自带方法实现hover的图片显示 -->
+                        <li id="weixinTips" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='imgs/contract.png' width='120px'>">
+                            <a href="#">
+                                <i class="fa fa-qq"></i> 联系客服</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </header>
+    <!-- 页面头部 end-->
+    <!-- 导航 start-->
+    <nav class="navbar navbar-default navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <img src="imgs/logo.png" class="img-responsive" alt="">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=" navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="invest.html">我要投资</a>
+                    </li>
+                    <li>
+                        <a href="borrow.html">我要借款</a>
+                    </li>
+                    <li class="active">
+                        <a href="memberCenter.html">个人中心</a>
+                    </li>
+                    <li>
+                        <a href="#">新手指引</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- 导航 end-->
+
+    <!-- 内容 start -->
+    <div class="container member">
+        <div class="row">
+            <!-- 导航菜单 -->
+            <div class="col-sm-3 nav_left">
+                <div class="panel-group" role="tablist">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading0">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup0" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    投资项目
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">投资项目</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    借款项目
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item  active">
+                                    <a href="borrow_list.html">借款项目</a>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="borrow_apply.html">还款明细</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="borrow_echarts.html">借款类型报表</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading2">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup2" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    我的账户
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">账户信息</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">实名认证</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">银行卡管理</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">登录记录</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading3">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup3" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    资产详情
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">账户流水</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">充值明细</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">提现记录</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">收款明细</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" role="tab" id="collapseListGroupHeading4">
+                            <h4 class="panel-title">
+                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup4" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    个人资料
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1"
+                            aria-expanded="true">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">个人资料</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 借款项目列表 -->
+            <div class="col-sm-9 borrow_list">
+                <div class="panel panel-default">
+                    <div class="panel-heading">借款项目</div>
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>标题</th>
+                                    <th>时间</th>
+                                    <th>借款金额(元)</th>
+                                    <th>期限</th>
+                                    <th>利率</th>
+                                    <th>状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <a href="#">江湖救急</a>
+                                        <button class="btn btn-primary btn-xs">信</button>
+                                    </th>
+                                    <td>206-01-05</td>
+                                    <td>2000</td>
+                                    <td>12月</td>
+                                    <td>12%</td>
+                                    <td>
+                                        <span class="text-muted">待发布</span>
+                                        <span class="text-success">招标中</span>
+                                        <span class="text-success">满标</span>
+                                        <span class="text-success">未审核</span>
+                                        <span class="text-success">还款中</span>
+                                        <span class="text-danger">招标拒绝</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 内容 end -->
+
+
+    <!-- 底部 -->
+    <footer id="footer" class="row">
+        <div class="container">
+            <div class="col-sm-8 col-xs-12">
+                <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                <p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+                <p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+                <p>电  话： 028-86261949&nbsp; / 400-808-6840  邮箱： yuandaima@itsource.cn
+                </p>
+                <p>
+                    <a href="http://www.miitbeian.gov.cn">蜀ICP备14030149号-1</a>
+                    <a href="http://www.gaj.chengdu.gov.cn">蜀公网安备510114990541</a>
+                </p>
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <p>官方微博：</p>
+                <img src="./imgs/tecent.png" class="img-responsive" alt="">
+                <img src="./imgs/sina.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <p>官方微信：</p>
+                <img src="./imgs/wx.jpg" class="img-responsive" alt="">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- bootstrap库文件 -->
+    <script src="./lib/bootstrap/dist//js/bootstrap.js"></script>
+    <!-- 自定义脚本 -->
+    <script src="dist/js/p2pEffects.js"></script>
+</body>
+
+</html>

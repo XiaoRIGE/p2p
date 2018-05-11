@@ -1,0 +1,70 @@
+/*头部*/
+ul li {
+  list-style: none;
+}
+/*头部样式*/
+header .navbar {
+  border-radius: 0px;
+  margin-bottom: 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  padding: 15px 10px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #0099FF;
+}
+.navbar-inverse .navbar-brand {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 24px;
+}
+.glyphicon-phone-alt {
+  color: #fff;
+  font-size: 16px;
+}
+/*导航样式*/
+.navigation {
+  margin-bottom: 10px;
+}
+.navigation .navbar-header {
+  padding: 25px 15px;
+  font-size: 20px;
+}
+.navigation .navbar-nav > li > a {
+  min-width: 80px;
+  line-height: 60px;
+  font-size: 16px;
+}
+.navigation .navbar-nav > li > a:hover {
+  background: none repeat scroll 0 0 #f0f0f0;
+  color: #0099FF;
+}
+/*小屏断点*/
+@media screen and (max-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    text-align: center;
+  }
+}
+.container .invest_list > div {
+  margin: 20px 0px;
+}
+.container .invest_list > div div {
+  margin-left: 30px;
+}
+@media screen and (max-width: 768px) {
+  .mobileHide {
+    display: none;
+  }
+}
+/*尾部*/
+/*尾部*/
+#footer {
+  background-color: #f8f8f8;
+  margin: 20px 0px 20px 0px;
+  padding-top: 30px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=maps/invest.css.map */

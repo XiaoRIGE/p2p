@@ -1,0 +1,165 @@
+/*头部*/
+ul li {
+  list-style: none;
+}
+/*头部样式*/
+header .navbar {
+  border-radius: 0px;
+  margin-bottom: 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  padding: 15px 10px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #0099FF;
+}
+.navbar-inverse .navbar-brand {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 24px;
+}
+.glyphicon-phone-alt {
+  color: #fff;
+  font-size: 16px;
+}
+/*导航样式*/
+.navigation {
+  margin-bottom: 10px;
+}
+.navigation .navbar-header {
+  padding: 25px 15px;
+  font-size: 20px;
+}
+.navigation .navbar-nav > li > a {
+  min-width: 80px;
+  line-height: 60px;
+  font-size: 16px;
+}
+.navigation .navbar-nav > li > a:hover {
+  background: none repeat scroll 0 0 #f0f0f0;
+  color: #0099FF;
+}
+/*小屏断点*/
+@media screen and (max-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    text-align: center;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+/*内容*/
+.member #leftNav ul li {
+  padding-left: 50px;
+}
+.member #leftNav ul .active a {
+  color: ghostwhite;
+}
+.member #leftNav h4 a {
+  color: #337ab7;
+}
+.member #rightCon {
+  /*详细信息*/
+}
+.member #rightCon #toggleBtn {
+  display: none;
+}
+.member #rightCon .member_basic {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px;
+}
+.member #rightCon .member_basic .head_img {
+  border: 1px solid #ddd;
+  padding: 10px;
+  float: left;
+}
+.member #rightCon .member_basic .head_img img {
+  width: 72px;
+  height: 72px;
+}
+.member #rightCon .member_basic .pull-left {
+  margin-left: 20px;
+}
+.member #rightCon .member_detailed {
+  border-bottom: 1px solid #ddd;
+}
+.member #rightCon .member_detailed .row {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.member #rightCon .member_detailed .row .member_money {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.member #rightCon .member_detailed .row .member_info_manage {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.member #rightCon .member_detailed .row .member_info_manage .btn:nth-of-type(1) {
+  margin-right: 20px;
+}
+.member #rightCon .member_detailed .row .member_info {
+  margin-bottom: 20px;
+}
+.member #rightCon .member_detailed .row .member_infotext {
+  margin-left: 10px;
+}
+.member #rightCon .member_detailed .row .member_infotext h5 {
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px 0px 10px 0px;
+}
+.member #rightCon .member_detailed .moneyColor {
+  color: #337ab7;
+}
+@media screen and (max-width: 994px) {
+  .member .member_info_manage {
+    margin-left: 100px;
+  }
+  .member .member_infotext {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .member .member_money {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .member #memberMain {
+    position: relative;
+    height: 1000px;
+    left: 0;
+    transition: all 0.3s linear;
+  }
+  .member #memberMain.active {
+    left: -52%;
+  }
+  .member #rightCon {
+    position: absolute;
+    right: -50%;
+    /*基本信息*/
+  }
+  .member #rightCon #toggleBtn {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .member .member_info_manage {
+    margin-left: 0;
+  }
+}
+/*尾部*/
+/*尾部*/
+#footer {
+  background-color: #f8f8f8;
+  margin: 20px 0px 20px 0px;
+  padding-top: 30px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=maps/memberCenter.css.map */

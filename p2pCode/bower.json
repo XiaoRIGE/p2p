@@ -1,0 +1,17 @@
+{
+  "name": "p2pcode",
+  "description": "",
+  "main": "",
+  "authors": [
+    "宋小日 <33147011+XiaoRIGE@users.noreply.github.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

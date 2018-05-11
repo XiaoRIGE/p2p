@@ -1,0 +1,136 @@
+/*头部*/
+ul li {
+  list-style: none;
+}
+/*头部样式*/
+header .navbar {
+  border-radius: 0px;
+  margin-bottom: 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  padding: 15px 10px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #0099FF;
+}
+.navbar-inverse .navbar-brand {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 24px;
+}
+.glyphicon-phone-alt {
+  color: #fff;
+  font-size: 16px;
+}
+/*导航样式*/
+.navigation {
+  margin-bottom: 10px;
+}
+.navigation .navbar-header {
+  padding: 25px 15px;
+  font-size: 20px;
+}
+.navigation .navbar-nav > li > a {
+  min-width: 80px;
+  line-height: 60px;
+  font-size: 16px;
+}
+.navigation .navbar-nav > li > a:hover {
+  background: none repeat scroll 0 0 #f0f0f0;
+  color: #0099FF;
+}
+/*小屏断点*/
+@media screen and (max-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    text-align: center;
+  }
+}
+/*内容*/
+.member .nav_left ul li {
+  padding-left: 50px;
+}
+.member .nav_left ul .active a {
+  color: ghostwhite;
+}
+.member .nav_left h4 a {
+  color: #337ab7;
+}
+.member .borrow_apply .tip_info {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #F4F8FA;
+  border-left: 2px solid #0099DD;
+}
+.member .borrow_apply .tip_info h3 {
+  color: #09d;
+}
+.member .borrow_apply .tip_info p > .text-danger {
+  margin-right: 80px;
+}
+.member .borrow_apply .borrow_apply_title {
+  font-size: 20px;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+.member .borrow_apply .borrow_apply_title .btn-primary {
+  font-size: 75%;
+}
+.member .borrow_apply .borrow_apply_form {
+  position: relative;
+}
+.member .borrow_apply .borrow_apply_form label {
+  line-height: 34px;
+}
+.member .borrow_apply .borrow_apply_form .input_group {
+  width: 455px;
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.member .borrow_apply .borrow_apply_form input[type="radio"] {
+  margin-top: 10px;
+}
+.member .borrow_apply .borrow_apply_form .borrow_form_tips {
+  position: absolute;
+  width: 250px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 20px #ddd;
+  padding: 20px 30px;
+  top: 10px;
+  right: 30px;
+}
+.member .borrow_apply .borrow_apply_form .col-sm-6 {
+  padding-right: 0;
+}
+@media screen and (max-width: 992px) {
+  .member .borrow_apply .borrow_apply_form .borrow_form_tips {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .member .borrow_apply .borrow_apply_form .borrow_form_tips {
+    position: relative;
+    width: 250px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .member .borrow_apply .borrow_apply_form .input_group {
+    width: 100%;
+  }
+}
+/*尾部*/
+/*尾部*/
+#footer {
+  background-color: #f8f8f8;
+  margin: 20px 0px 20px 0px;
+  padding-top: 30px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=maps/borrow_apply.css.map */

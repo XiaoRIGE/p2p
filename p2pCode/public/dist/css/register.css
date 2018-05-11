@@ -1,0 +1,99 @@
+/* 登录面板样式 导航*/
+.navbar img {
+  display: inline-block;
+  margin-top: 10px;
+}
+.navbar span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #337ab7;
+}
+/*注册面板样式*/
+.register .panel .panel-register {
+  margin: 10px auto;
+  /* 小屏断点*/
+}
+.register .panel .panel-register p {
+  color: #999;
+  margin: 10px 10px 10px 30px;
+}
+.register .panel .panel-register .form-group {
+  margin: 15px 0;
+}
+.register .panel .panel-register .form-group label {
+  text-align: right;
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.register .panel .panel-register .form-group .inputbox {
+  padding-left: 0;
+}
+.register .panel .panel-register .form-group .col-sm-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.register .panel .panel-register .form-group .col-sm-offset-4 a {
+  padding-left: 20px;
+  text-decoration: none;
+}
+.register .panel .panel-register .form-group .col-sm-offset-4 .btn {
+  padding: 6px 0;
+}
+.register .panel .panel-register .form-group p > a {
+  margin-left: 160px;
+}
+.register .panel .panel-register #submit {
+  width: 100px;
+  height: 34px;
+  color: #fff;
+  background-color: #5cb85c;
+  border: 1px solid #4cae4c;
+  border-radius: 5px;
+}
+.register .panel .panel-register .modal:nth-of-type(1) .modal-body {
+  overflow-y: scroll;
+  height: 600px;
+}
+.register .panel .panel-register .modal:nth-of-type(2) .modal-body .glyphicon {
+  font-size: 20px;
+}
+.register .panel .panel-register .modal:nth-of-type(2) .modal-body .glyphicon-ok {
+  color: green;
+}
+.register .panel .panel-register .modal:nth-of-type(2) .modal-body .glyphicon-remove,
+.register .panel .panel-register .modal:nth-of-type(2) .modal-body .djsNum {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+@media screen and (max-width: 768px) {
+  .register .panel .panel-register {
+    width: 364px;
+  }
+  .register .panel .panel-register p {
+    margin: 10px 10px 10px 10px;
+  }
+  .register .panel .panel-register .form-group p > a {
+    margin-left: 30px;
+  }
+  .register .panel .panel-register .form-group label {
+    text-align: left;
+  }
+}
+/*尾部*/
+#footer {
+  background-color: #f8f8f8;
+  margin: 20px 0px 20px 0px;
+  padding-top: 30px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=maps/register.css.map */

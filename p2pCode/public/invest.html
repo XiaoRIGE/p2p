@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--开启视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css">
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+    <!-- 引入分页插件样式文件 -->
+    <link rel="stylesheet" href="./lib/JqueryPagination/jquery.pagination.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="./dist/css/invest.css">
+    <!-- jq库文件 -->
+    <script src="./lib/jquery/dist/jquery.js"></script>
+    <!-- 验证是否登录 -->
+    <script src="dist/js/checklogin.js"></script>
+    <title>我要投资</title>
+</head>
+
+<body>
+    <!-- 页面头部 start-->
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span class="glyphicon glyphicon-phone-alt"></span>
+                        <i> 028-86261949</i>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-home"></i> 首页</a>
+                        </li>
+                        <!-- 登陆后再显示 -->
+                        <li class="loginshow ">
+                            <a href="memberCenter.html">
+                                <i class="fa fa-pagelines"></i>
+                                <span class="username_value"></span>
+                            </a>
+                        </li>
+                        <li class="loginshow">
+                            <a href="#">
+                                <i class="fa fa-money"></i> 账户充值</a>
+                        </li>
+                        <li class="loginshow">
+                            <a href="users/logout">
+                                <i class="fa fa-sign-out"></i> 注销</a>
+                        </li>
+                        <!-- <li class="loginhide">
+                                    <a href="login.html"><i class="fa fa-sign-in"></i>  登录</a>
+                                </li>
+                                <li class="loginhide">
+                                    <a href="register.html"><i class="fa fa-registered"></i>  快速注册</a>
+                                </li> -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question-circle"></i> 帮助</a>
+                        </li>
+                        <!-- 通过bootstrap自带方法实现hover的图片显示 -->
+                        <li id="weixinTips" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='imgs/contract.png' width='120px'>">
+                            <a href="#">
+                                <i class="fa fa-qq"></i> 联系客服</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </header>
+    <!-- 页面头部 end-->
+    <!-- 导航 start-->
+    <nav class="navbar navbar-default navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <img src="imgs/logo.png" class="img-responsive" alt="">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=" navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li class="active">
+                        <a href="invest.html">我要投资</a>
+                    </li>
+                    <li>
+                        <a href="borrow.html">我要借款</a>
+                    </li>
+                    <li>
+                        <a href="memberCenter.html">个人中心</a>
+                    </li>
+                    <li>
+                        <a href="#">新手指引</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- 导航 end-->
+
+    <!-- 内容 start -->
+    <div class="container">
+        <div class="invest_list">
+            <h4>投资列表</h4>
+            <div>
+                <span class="text-muted">标的状态</span>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="bidRequestState" value="-1" autocomplete="off" checked=""> 全部
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="bidRequestState" value="2" autocomplete="off"> 招标中
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="bidRequestState" value="8" autocomplete="off"> 还款中
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>借款人</th>
+                    <th class="mobileHide">借款标题</th>
+                    <th>年利率</th>
+                    <th>金额</th>
+                    <th class="mobileHide">还款方式</th>
+                    <th>进度</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="inveselist">
+                <tr>
+                    <td scope="row">张三</td>
+                    <td class="mobileHide">给我2000度过难关</td>
+                    <td>10.00%</td>
+                    <td>2,000.00</td>
+                    <td class="mobileHide">按月分期还款</td>
+                    <td>78.00%</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm" href="borrow_info.html?id=1">查看</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <!-- 分页 -->
+        <div class="container text-center">
+            <section id="demo">
+                <div id="page" class="m-pagination"></div>
+                <div id="eventLog"></div>
+            </section>
+        </div>
+    </div>
+    <!-- 内容 end -->
+
+
+    <!-- 底部 -->
+    <footer id="footer" class="row">
+        <div class="container">
+            <div class="col-sm-8 col-xs-12">
+                <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                <p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+                <p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+                <p>电  话： 028-86261949&nbsp; / 400-808-6840  邮箱： yuandaima@itsource.cn
+                </p>
+                <p>
+                    <a href="http://www.miitbeian.gov.cn">蜀ICP备14030149号-1</a>
+                    <a href="http://www.gaj.chengdu.gov.cn">蜀公网安备510114990541</a>
+                </p>
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <p>官方微博：</p>
+                <img src="./imgs/tecent.png" class="img-responsive" alt="">
+                <img src="./imgs/sina.png" class="img-responsive" alt="">
+
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <p>官方微信：</p>
+                <img src="./imgs/wx.jpg" class="img-responsive" alt="">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- bootstrap库文件 -->
+    <script src="./lib/bootstrap/dist//js/bootstrap.js"></script>
+    <!-- 引入art模板库文件 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <!-- 引入分页插件 -->
+    <script src="./lib/JqueryPagination/jquery.pagination-1.2.7.js"></script>
+    <!-- 自定义脚本 -->
+    <script src="dist/js/p2pEffects.js"></script>
+    <!-- 定义模板 -->
+    <script type="text/html" id="investlist">
+        {{each list as v i}}
+        <tr>
+            <td scope="row">{{v.borrowPerson}}</td>
+            <td class="mobileHide">{{v.borrowTitle}}</td>
+            <td>{{v.borrowRate}}%</td>
+            <td>{{v.borrowMoney}}</td>
+            <td class="mobileHide">{{v.repayment}}</td>
+            <td>0.00%</td>
+            <td>
+                <a class="btn btn-danger btn-sm" href="borrow_info.html?id=1">查看</a>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+    <!-- 配置分页插件 -->
+    <script>
+        $("#page").page({
+            debug: true,
+            showInfo: true,
+            showJump: true,
+            showPageSizes: true,
+            pageSize:5,
+            remote: {
+                url: '/borrow/investList',
+                success: function (data) {
+                    // $("#eventLog").append(' remote callback : ' + JSON.stringify(data) + '<br />');
+                    //请求成功后需要做的事情------渲染模板，然后将模板添加到页面
+                    var investHtml=template("investlist",data);
+                    //console.log(investHtml);
+                    // 将渲染后的HTML添加到页面
+                    $("#inveselist").html(investHtml);
+
+                }
+            }
+        });
+
+        $("#page").on("pageClicked", function (event, pageIndex) {
+            // $("#eventLog").append('EventName = pageClicked , pageIndex = ' + pageIndex + '<br />');
+        }).on('jumpClicked', function (event, pageIndex) {
+            // $("#eventLog").append('EventName = jumpClicked , pageIndex = ' + pageIndex + '<br />');
+        }).on('pageSizeChanged', function (event, pageSize) {
+            // $("#eventLog").append('EventName = pageSizeChanged , pageSize = ' + pageSize + '<br />');
+        });
+    </script>
+    <!-- 获取我要投资脚本 -->
+    <!-- <script src="dist/js/investList.js"></script> -->
+</body>
+
+</html>
